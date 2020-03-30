@@ -1,5 +1,5 @@
-// TZ : 337966642 Name : Avinoam Sebbah
-// For the Int() I did not manage to modify the Data Type Size because ErdPlus does not give me the possibility
+-- TZ : 337966642 Name : Avinoam Sebbah
+-- For the Int() I did not manage to modify the Data Type Size because ErdPlus does not give me the possibility
 
 CREATE TABLE area
 (
