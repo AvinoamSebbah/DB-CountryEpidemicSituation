@@ -7,6 +7,7 @@ WHERE virus.virusid = cure.virusId and virus.virusname = 'COVID-19' and medicame
 SELECT medName
 FROM medicament
 WHERE quantity < 10000
+
 CREATE INDEX medicamentQuantity
 ON medicament (quantity)
 
@@ -28,7 +29,7 @@ SELECT  scientistName
 FROM medicament, cure, virus,scientist, work_on
 WHERE virus.virusid = cure.virusId and virus.virusname = 'COVID-19' and medicament.medId = cure.medid    and  scientist.scientistId = work_on.scientistId and  medicament.medId = work_on.medid
 
-***FREQUENCY OF MEDICAMENT CURE FOR VIRUS*** 2/4 HARD - 10.68 Seconds to 9.48 or 8.90 Seconds - INDEX
+***FREQUENCY OF MEDICAMENT CURE FOR VIRUS*** 2/4 HARD - 10.68 Seconds to 8.90 Seconds - INDEX
 SELECT medicament.medName, COUNT(cure.medid) AS MOST_VIRUS_CURE
 from cure,medicament
 WHERE medicament.medId = cure.medID
@@ -49,6 +50,7 @@ WHERE virus.virusid = cure.virusId and scientist.specialization = 'Immunology'  
 
 CREATE INDEX scientistSpecialization
 ON scientist ('Immunology')
+
 CREATE INDEX virusDanger
 ON virus (dangerlevel)
 
@@ -57,8 +59,3 @@ ON virus (dangerlevel)
 Select scientistname, lablocation
 from scientist , laboratory
 where laboratory.labid = scientist.labid and lablocation LIKE '%ISRAEL%'
-
-
-
-
-
