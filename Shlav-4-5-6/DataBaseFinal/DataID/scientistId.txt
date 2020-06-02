@@ -1,0 +1,18 @@
+3000000 à 3019999
+
+FILE_NAME(scientist.txt)
+FILE_ACTION(ACTION_OVERWRITE)
+FILE_COLUMN_HEADERS(TRUE)
+FILE_COLUMN_DELIMITER(',')
+FILE_FIELD_ENCLOSING_CHARS('"')
+FILE_RECORD_DELIMITER('\r\n')
+FILE_RECORD_COUNT(18000)
+PROJECT_OUTPUT_DIRECTORY(C:\Users\avino\Desktop\Semestre B\Projet Bsisei Netounim\Projet\DataBase\DataBaseFinal)  
+
+[scientistId] INCREMENTING_FROM(3002000,1,1,1)  TO_INTEGER()  
+[scientistName]  PERSON_FULLNAME()  
+[age]  INTEGER_IN_RANGE(18,75) 
+[salary] IN_RANGE(10000,80000) ROUND_DECIMAL_PLACES(2)  
+[specialization] APPEND_ONE_OF('Biochemistry,Bioinformatics,Biostatistics,Biophysics,Cell and Molecular Biology,Ecology/Environmental Science,Entomology,Genetics,Immunology,Marine and Aquatic Biology,Microbiology,Neuroscience,Nutrition and Food Science,Pharmacology,Physiology')  
+[phoneNr]  TELEPHONE_NUMBER_FORMATTED(05########) 
+[labId]   INTEGER_IN_RANGE(60000,61999)  

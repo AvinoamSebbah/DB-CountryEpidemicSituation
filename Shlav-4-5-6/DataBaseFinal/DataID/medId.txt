@@ -1,0 +1,18 @@
+20000 to 39999
+
+FILE_NAME(medicament.txt)
+FILE_ACTION(ACTION_OVERWRITE)
+FILE_COLUMN_HEADERS(TRUE)
+FILE_COLUMN_DELIMITER(',')
+FILE_FIELD_ENCLOSING_CHARS('"')
+FILE_RECORD_DELIMITER('\r\n')
+FILE_RECORD_COUNT(20000)
+PROJECT_OUTPUT_DIRECTORY(C:\Users\avino\Desktop\Semestre B\Projet Bsisei Netounim\Projet\DataBase\DataBaseFinal)  
+
+
+
+[medName] RIVERS_IRISH()   ASSERT_MAX_LENGTH_IS(22)     ASSERT_IS_UNIQUE()  
+[medType] APPEND_ONE_OF('Antipyretics,Analgesics,Antimalarial,Antibiotics,Antiseptics,Mood stabilizers,Hormone replacements,Oral contraceptives,Stimulants,Tranquilizers,Statins')
+[medId] INCREMENTING_FROM(20000,1,1,1)  TO_INTEGER()  
+[quantity] INTEGER_IN_RANGE(0,100000) 
+[factCompany] RIVERS_SCOTTISH()    ASSERT_MAX_LENGTH_IS(40)  
