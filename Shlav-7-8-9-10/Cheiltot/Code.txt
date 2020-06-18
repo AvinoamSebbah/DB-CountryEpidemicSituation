@@ -1,0 +1,13 @@
+1.	SELECT  abergwer.medical_equipment.companyname, medicament.mednam
+FROM abergwer.medical_equipment, medicament
+WHERE  abergwer.medical_equipment.productname = medicament.medname and medicament.quantity < 20000
+
+
+2.	SELECT DISTINCT laboratory.labname as Laboratory, abergwer.courier.companyname as CourierCompany
+FROM abergwer.courier, laboratory
+WHERE laboratory.lablocation = abergwer.courier.area
+
+
+3.	SELECT laboratory.labname as Problematic_Laboratory, laboratory.lablocation
+FROM abergwer.hospital, laboratory
+WHERE laboratory.labname = abergwer

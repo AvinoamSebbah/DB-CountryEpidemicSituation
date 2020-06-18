@@ -1,0 +1,7 @@
+grant select on Hospital to asebbah;
+grant select on Medical_Inventory to asebbah;
+grant select on Courier to asebbah;
+grant select on Medical_equipment_manufacturing_companies to asebbah;
+grant select on Manufacture_to- to asebbah;
+grant select on Delivered_to- to asebbah;
+grant select on Transferred_to- to asebbah;
